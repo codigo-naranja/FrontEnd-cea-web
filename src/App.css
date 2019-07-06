@@ -1,0 +1,312 @@
+.banner{
+  display: flex;
+  justify-content: space-around;
+}
+.menu:hover{
+  color: #0095C5 !important;
+  border-bottom: 1px solid #0095C5;
+  background-color: #ffffff;
+}
+.imgprin{
+  height: 80px;
+}
+.helper{
+  background-color: #0095C5;
+  border: 1px solid #0095C5;
+  height: 35px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 28px;
+  cursor: pointer;
+}
+.helper:hover{
+  background-color: #ffffff;
+  border: 1px solid #0095C5;
+  color:#0095C5 !important;
+}
+.ahelper:hover{
+  background-color: #ffffff;
+}
+.menu:active{
+  border-bottom: 1px solid #0095C5;
+  background-color: #ffffff;
+}
+.rowconmagtop{
+  margin-top: 30px;
+  margin-bottom:0;
+}
+.colorsvg1{
+  background-color: #1D73BD;
+  padding: 20px;
+}
+.colorsvg2{
+  background-color: #F2B930;
+  padding: 20px;
+}
+.colorsvg3{
+  background-color: #D01BC5;
+  padding: 20px;
+}
+h6{
+  font-size: 20px;
+}
+.divp{
+  display: flex;
+  justify-content: center;
+}
+.partic{
+  width: 50%;
+}
+.titgray{
+  color: #585858;
+}
+.rowbackgray{
+  background-color: #F7F7F7;
+}
+.acard{
+  color: #0095C5 !important;
+}
+.acard:hover{
+  opacity: 0.7;
+}
+.titblue{
+  color: #0095C5;
+}
+.txtform{
+  color:#9D9D9D !important;
+}
+.pPQR{
+  font-size: 12px;
+  color: #676767;
+}
+.mapa{
+  height: 450px;
+  width: 100%;
+}
+.rowsinmag{
+  margin: 0;
+}
+.rowpadtop{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.rowflex{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+.ilinkint{
+  background-color: #0095C5;
+  padding: 20px;
+}
+.linkint{
+  background-color: #032C39;
+  padding: 25px 20px 20px 20px;
+  color: #ffffff;
+  font-size: 16px;
+}
+.colconmagtop{
+  margin-top: 20px;
+}
+.invisible{
+    display:none;
+}
+/*--------------CSS Banner----------------------------------*/
+.imgbanner{
+  width: 100%;
+}
+/*--------------CSS Footer---------------------------------*/
+footer{
+  background-color: #032C39;
+}
+.pfooter{
+  font-size: 12px;
+}
+.afooter{
+  margin: 12px 0 12px 20px;
+  font-size: 12px;
+}
+.afooter:hover{
+  opacity: 0.7;
+}
+.divbordetop{
+  display: flex;
+  border-top: 1px solid #707070;
+}
+.divheight{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 80px;
+  margin: 30px;
+}
+
+.collapsible-header{
+  background-color: #0095C5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 24px;
+}
+
+.collapsible {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+.sss {
+  background-color: #D01BC5 !important
+}
+
+/*----Estilos Colegio-------------------------------*/
+.colsinpad{
+    padding:0 !important;
+}
+.contconmagtop{
+    margin-top:20%;
+}
+.pcol{
+    font-size:20px;
+    text-align:justify;
+}
+.abutton{
+    padding-top:10px;
+    padding-bottom:10px;
+    margin: 10px 0;
+    font-size:20px;
+}
+.hrcolegio {
+    width: 60px;
+    color: #0095C5;
+}
+.pgray{
+  color: #909090;
+  font-size: 20px;
+}
+.ulflex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  width: 80%;
+}
+.ulflex li{
+  font-size: 18px;
+}
+.ulflex i{
+  color: #0095C5;
+}
+/*----Estilos Proyectos-------------------*/
+.colorcard{
+  background-color: #F8F8F8;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.acardproy{
+  background-color: #0095C5;
+  border: 1px solid #0095C5;
+  height: 35px;
+  padding: 10px 20px;
+  border-radius: 28px;
+  font-size: 12px;
+}
+.acardproy:hover{
+  background-color: #ffffff;
+  border: 1px solid #0095C5;
+  color:#0095C5 !important;
+}
+.pjustify{
+  text-align: justify;
+}
+.titmay{
+  text-transform: uppercase;
+  font-size: 20px !important;
+}
+/*---Estilos Admisiones----------------*/
+.hsinmagtop{
+  margin-top: 0;
+}
+.hnum{
+  font-size: 35px;
+}
+.pnum{
+  font-size: 20px;
+  text-align: justify;
+  margin-top: 0;
+}
+.hpconmagtop{
+  margin-top: 20px;
+}
+.abluedark{
+  background-color: #09617E;
+  border: 1px solid #09617E;
+  height: 35px;
+  padding: 10px 50px;
+  border-radius: 28px;
+  font-size: 20px;
+}
+.abluedark:hover{
+  background-color: #ffffff;
+  border: 1px solid #09617E;
+  color:#09617E !important;
+}
+/*---Estilos Modals Informativos-----------------*/
+.rowblue{
+  background-color: #0095C5;
+  padding-top: 20px;
+}
+.hrwhite {
+  width: 60px;
+  color: #ffffff;
+}
+.btnfloat{
+  background-color: #0095C5 !important;
+}
+/*---Estilos Login---------------------------------*/
+.imglog{
+  height: 100vh;
+}
+.rowsinscroll{
+  overflow: hidden;
+  max-height: 100vh;
+}
+.titlog{
+  color: #43425D;
+}
+.plog{
+  color: #676767;
+}
+.butonlogcolor{
+  background-color: #43425D;
+  border: 1px solid #43425D;
+  height: 50px;
+  padding: 0 60px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.butonlogcolor:hover{
+  background-color: #ffffff;
+  border: 1px solid #43425D;
+  color:#43425D !important;
+}
+.butonlognocolor{
+  background-color: #ffffff;
+  border: 1px solid #43425D;
+  padding: 12px 60px;
+  border-radius: 4px;
+  font-size: 15px;
+  color:#43425D !important;
+  margin: 0;
+}
+.butonlognocolor:hover{
+  background-color: #43425D;
+  border: 1px solid #43425D;
+  color:#ffffff !important;
+}
+/*Estilos Noticias*/
+.pcards{
+  font-size: 12px;
+}
