@@ -35,7 +35,7 @@ class CardN extends Component {
                     <div class="col s12 m4">
                         <div class="card hoverable">
                             <div class="card-image">
-                                <img src = {this.props.url} alt="Noticia"/>
+                                <img className="imgcard" src = {this.props.url} alt="Noticia"/>
                             </div>
                             
                             {/* Contenido de la card */}
@@ -58,7 +58,7 @@ class CardN extends Component {
                 
                 <div id={this.props.id} class="modal modal-fixed-footer">
                     <div class="modal-content">
-                        <img src={this.props.url} alt="imagen" className="imgbanner" />
+                        <img src={this.props.url} alt="imagen" className="imgbanner imgcard" />
                         <hr className="hrcolegio"/>
                         <p className="pcards"><b>Autor:</b> {this.props.creadoPor}</p>
                         <p className="pcards"><b>Fecha:</b> {this.props.fecha}</p>

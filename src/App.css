@@ -310,3 +310,6 @@ footer{
 .pcards{
   font-size: 12px;
 }
+.imgcard{
+  max-height: 300px;
+}

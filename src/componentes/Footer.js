@@ -2,11 +2,48 @@ import React , {Component } from 'react';
 import logo from '../img/cea-foot.png';
 import '../App.css';
 import M from 'materialize-css';
+import TableV from './TableV';
 import { Link } from 'react-router-dom';
 
+import axios from 'axios';
+
 class Footer extends Component {
+    constructor (props) {
+        super(props);
+        this.state = { 
+            valores: [  ]
+        }
+    }
+    getValores = ()=> {
+        const URL = 'https://mighty-depths-11165.herokuapp.com/api/v5/admin/get/values/21351532';
+
+        axios.get (URL)
+        .then((result) => {
+            this.setState ({
+                valores: result.data
+                
+            })
+        }).catch((err) => {
+            console.log(err)
+        });
+    }
+
     componentDidMount() {
         M.AutoInit();
+        this.getValores();
+    }
+    renderValores = () => {
+        if (this.state.valores.length === 0) {
+            return  <div class="progress">
+            <div class="indeterminate"></div>
+        </div>
+                
+        } else {
+            const listaval = this.state.valores.map((valor) => {
+                return <TableV getValores={this.getValores} Nombre={valor.Nombre} Matricula={valor.Matricula} Pension={valor.Pension} />
+            });
+            return listaval
+        }
     }
     render(){
         return(
@@ -177,51 +214,17 @@ class Footer extends Component {
                         </div>
                         <div className="row">
                             <table className="striped">
-                                <thead>
-                                    <tr>
-                                        <th>Nivel</th>
-                                        <th>Matricula</th>
-                                        <th>Pension</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Transición</td>
-                                        <td>$189.000 pesos</td>
-                                        <td>$189.000 pesos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Primero</td>
-                                        <td>$144.045 pesos</td>
-                                        <td>$144.045 pesos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Segundo</td>
-                                        <td>$127.822 pesos</td>
-                                        <td>$127.822 pesos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tercero y Cuarto</td>
-                                        <td>$125.927 pesos</td>
-                                        <td>$125.927 pesos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Quinto</td>
-                                        <td>$124.845 pesos</td>
-                                        <td>$124.845 pesos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sexto y Séptimo</td>
-                                        <td>$125.572 pesos</td>
-                                        <td>$125.572 pesos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Octavo a Once</td>
-                                        <td>$151.311 pesos</td>
-                                        <td>$151.311 pesos</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <thead>
+                                <tr>
+                                    <th>Nivel</th>
+                                    <th>Matricula</th>
+                                    <th>Pensión</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               {this.renderValores()}
+                            </tbody>              
+                        </table>     
                         </div>
                     </div>
                     <div class="modal-footer">

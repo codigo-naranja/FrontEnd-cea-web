@@ -10,6 +10,7 @@ import Banner from './Banner';
 import CardN from './CardN';
 import Footer from './Footer';
 import Btnfloat from './btnfloat';
+
 import axios from 'axios';
 
 
@@ -23,12 +24,12 @@ class Principal extends Component{
             noticias: [  ],
 
             newPQR:{
-                nombre: "",
+                name: "",
                 email: "",
-                pqr: "",
-                mensaje: ""
-            }
-            
+                type: "",
+                message: "",
+                nit: 21351532
+            }        
             // nuevaNoticia: {
             //     imagen: "",
             //     titulo: "",
@@ -44,13 +45,15 @@ class Principal extends Component{
         this.getNoticias()
     }
     getNoticias = ()=> {
-        axios.get ('https://mysterious-harbor-41673.herokuapp.com/api/v1/noticias/get')
+        const URL = 'https://mighty-depths-11165.herokuapp.com/api/v5/admin/get/news/21351532';
+
+        axios.get (URL)
         .then((result) => {
             this.setState ({
                 noticias: result.data
             })
         }).catch((err) => {
-            alert(err)
+            console.log(err)
         });
     }
 
@@ -62,18 +65,17 @@ class Principal extends Component{
         this.setState ({
             newPQR: nuevoState
         })
-      
     }
     crearPeticion = (e) => {
-        const nom = document.getElementById('nombre').value;
+        const nom = document.getElementById('name').value;
         const mail = document.getElementById('email').value;
-        const pqr = document.getElementById('pqr').value;
-        const mens = document.getElementById('mensaje').value;
+        const pqr = document.getElementById('type').value;
+        const mens = document.getElementById('message').value;
 
         if (nom === '' || mail === '' || mens === '' || pqr === ''){
             M.toast({html: 'Por favor llene todos los campos', classes: 'rounded'})
         }else{
-            const URL = 'https://mysterious-harbor-41673.herokuapp.com/api/v1/peticiones/create'
+            const URL = 'https://mighty-depths-11165.herokuapp.com/api/v5/admin/create/pqr'
             const pqr = this.state.newPQR
             
             axios.post (URL, pqr)
@@ -82,9 +84,9 @@ class Principal extends Component{
             }).catch((err) => {
                 alert(err)
             });
-            document.getElementById('nombre').value='';
+            document.getElementById('name').value='';
             document.getElementById('email').value='';
-            document.getElementById('mensaje').value='';
+            document.getElementById('message').value='';
         }
         
     }
@@ -119,8 +121,8 @@ class Principal extends Component{
                 
         } else {
             const listanot = this.state.noticias.map((noti) => {
-                let idnoti = "#" + noti._id;
-                return <CardN getNoticias={this.getNoticias} id={noti._id} url={noti.imagen} titulo={noti.titulo} cuerpoNoticia={noti.cuerpoNoticia} notiId={idnoti} creadoPor={noti.creadoPor} fecha={noti.createdAt} />
+                let idnoti = "#" + noti.id;
+                return <CardN getNoticias={this.getNoticias} id={noti.id} url={noti.url} titulo={noti.titulo} cuerpoNoticia={noti.cuerpo} notiId={idnoti} creadoPor={noti.creadopor} fecha={noti.fecha} />
             });
             return listanot
         }
@@ -235,7 +237,7 @@ class Principal extends Component{
 
                                 {/* Campo Imput Nombre */}
                                 <div className="input-field col s12">
-                                    <input onChange={this.onInputChange} value = {this.state.newPQR.nombre} id="nombre" type="text" class="validate"></input>
+                                    <input onChange={this.onInputChange} value = {this.state.newPQR.nombre} id="name" type="text" class="validate"></input>
                                     <label for="name" className="txtform">Nombre</label>
                                 </div>
 
@@ -249,7 +251,7 @@ class Principal extends Component{
 
                                 {/* Campo imput PQR */}
                                 <div class="input-field col s12">
-                                    <select id="pqr" onChange={this.onInputChange} value={this.state.newPQR.pqr}>
+                                    <select id="type" onChange={this.onInputChange} value={this.state.newPQR.pqr}>
                                         <option value="" disabled selected>PQR</option>
                                         <option value="1">Pregunta</option>
                                         <option value="2">Queja</option>
@@ -259,7 +261,7 @@ class Principal extends Component{
 
                                 {/* Campo Imput Mensaje */}
                                 <div class="input-field col s12">
-                                    <textarea onChange={this.onInputChange} value={this.state.newPQR.mensaje} id="mensaje" class="materialize-textarea"></textarea>
+                                    <textarea onChange={this.onInputChange} value={this.state.newPQR.mensaje} id="message" class="materialize-textarea"></textarea>
                                     <label for="msg" className="txtform">Mensaje</label>
                                 </div>
 
