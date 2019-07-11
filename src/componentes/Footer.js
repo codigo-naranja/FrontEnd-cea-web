@@ -78,7 +78,7 @@ class Footer extends Component {
                         <div className="row rowblue white-text">
                             <h4 className="center-align">Horarios de Atención a Padres</h4>
                             <hr className="hrwhite"/>
-                            <p className="center-align">La atención en Cordinación Académica son solo con cita previa.</p>
+                            <p className="center-align">La atención de Docentes y Cordinación Académica son solo con cita previa.</p>
                         </div>
                         <div className="row">
                             <table className="striped">
@@ -236,15 +236,15 @@ class Footer extends Component {
                         <img src={logo} alt="CEA" className="imgprin"/>
                     </div>
                     <div className="divheight">
-                        <p className="white-text valign-wrapper">Calle 104 # 68 A - 77 | PBX: 444 5802</p>
+                        <p className="white-text valign-wrapper">Calle 104 # 68 A - 77 | Pbx: 444 5802 - Whp: 304 618 8902</p>
                     </div>
                 </div>
                 <div className="rowflex">
                     <div className="divbordetop">
-                        <p className="pfooter white-text">Sitio desarrollado por Código Naranja & Estudio Tándem / Todos los derechos reservados 2019</p>
+                        <p className="pfooter white-text">Sitio desarrollado por <a href="http://www.codigonaranja.co" target="_blank" className="white-text">Código Naranja</a> & Estudio Tándem / Todos los derechos reservados 2019</p>
                         <Link to={'/colegio'} className="afooter white-text">El Colegio</Link>
                         <Link to={'/admisiones'} className="afooter white-text">Admisiones</Link>
-                        <a href="http://ceautonomo.com.co/PhotoAlbumsPro/index.php" target="_blank" className="afooter white-text">Galeria</a>
+                        <a href="https://www.instagram.com/ceautonomo/" target="_blank" className="afooter white-text">Galeria</a>
                     </div>
                 </div>
             </footer>
