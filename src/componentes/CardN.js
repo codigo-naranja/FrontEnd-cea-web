@@ -2,6 +2,8 @@ import React , {Component } from 'react';
 import '../App.css';
 import M from 'materialize-css';
 import Axios from 'axios';
+import parse from 'html-react-parser';
+
 // import Notimg from '../img/education.png';
 // import axios from 'axios';
 
@@ -37,12 +39,9 @@ class CardN extends Component {
                             <div class="card-image">
                                 <img className="imgcard" src = {this.props.url} alt="Noticia"/>
                             </div>
-                            
                             {/* Contenido de la card */}
                             <div class="card-content">
                                 <span class="card-title">{this.props.titulo}</span>
-                                <p className="truncate">{this.props.cuerpoNoticia}</p>
-                                <br/>
                                 <hr className="hrcolegio"/>
                                 <p className="pcards"><b>Autor:</b> {this.props.creadoPor}</p>
                                 <p className="pcards"><b>Fecha:</b> {this.props.fecha}</p>
@@ -63,7 +62,7 @@ class CardN extends Component {
                         <p className="pcards"><b>Autor:</b> {this.props.creadoPor}</p>
                         <p className="pcards"><b>Fecha:</b> {this.props.fecha}</p>
                         <h4>{this.props.titulo}</h4>
-                        <p>{this.props.cuerpoNoticia}</p>
+                        <p>{parse(this.props.cuerpoNoticia)}</p>
                     </div>
                     <div class="modal-footer">
                         <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
