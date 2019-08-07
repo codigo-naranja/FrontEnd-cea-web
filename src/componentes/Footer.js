@@ -241,7 +241,7 @@ class Footer extends Component {
                 </div>
                 <div className="rowflex">
                     <div className="divbordetop">
-                        <p className="pfooter white-text">Sitio desarrollado por <a href="http://www.codigonaranja.co" target="_blank" className="white-text">Código Naranja</a> & Estudio Tándem / Todos los derechos reservados 2019</p>
+                        <p className="pfooter white-text">Sitio desarrollado por <a href="https://www.helpex.co" target="_blank" className="white-text">Helpex</a> & Estudio Tándem / Todos los derechos reservados 2019</p>
                         <Link to={'/colegio'} className="afooter white-text">El Colegio</Link>
                         <Link to={'/admisiones'} className="afooter white-text">Admisiones</Link>
                         <a href="https://www.instagram.com/ceautonomo/" target="_blank" className="afooter white-text">Galeria</a>
